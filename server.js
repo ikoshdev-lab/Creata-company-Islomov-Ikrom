@@ -323,6 +323,17 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// --- KEEP ALIVE (Serverni uxlashdan saqlash) ---
+// Render.com bepul versiyasi 15 daqiqa harakatsizlikdan keyin o'chadi.
+// Bu kod har 14 daqiqada saytga "ping" yuborib, uni uyg'oq saqlaydi.
+const LIVE_URL = 'https://creata-company-islomov-ikrom.onrender.com'; // Sizning sayt manzilingiz
+
+setInterval(() => {
+    fetch(LIVE_URL)
+        .then(() => console.log(`[Keep-Alive] Ping yuborildi: ${new Date().toISOString()}`))
+        .catch(err => console.error(`[Keep-Alive] Xatolik: ${err.message}`));
+}, 14 * 60 * 1000); // 14 daqiqa
+
 app.listen(port, () => {
     console.log(`Server http://localhost:${port} manzilida ishga tushdi`);
 });
