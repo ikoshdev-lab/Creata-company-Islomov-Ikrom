@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creata | Future is Here</title>
+    <meta name="description" content="Creata - Kelajak texnologiyalari, AI, Web Dasturlash va Kiberxavfsizlik xizmatlari. Ikrom Islomov tomonidan asos solingan.">
+    <meta name="keywords" content="Creata, AI, Web Development, Cybersecurity, Portfolio, Ikrom Islomov, Uzbekistan, IT">
+    <meta name="author" content="Ikrom Islomov">
+    <meta property="og:title" content="Creata | Future is Here">
+    <meta property="og:description" content="Creata - Kelajakni biz bilan quring. AI va zamonaviy texnologiyalar ekotizimi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- FAVICON (Browser Logosi) -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- CSS Faylga ulanish -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 1. CINEMATIC LOADING SCREEN -->
+    <div id="loader">
+        <svg width="100" height="100" viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="loadGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#D4AF37"/>
+                    <stop offset="100%" stop-color="#8B4513"/>
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="80" stroke="url(#loadGrad)" stroke-width="10" fill="none" stroke-dasharray="500" stroke-dashoffset="500">
+                <animate attributeName="stroke-dashoffset" from="500" to="0" dur="2s" fill="freeze" />
+            </circle>
+        </svg>
+        <p class="loader-text">CREATA IS LOADING THE FUTURE...</p>
+    </div>
+
+    <!-- LIGHT & NOISE -->
+    <div id="spotlight"></div>
+    <div class="noise-overlay"></div>
+    <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <div style="width: 24px; height: 24px; border: 1px solid var(--text-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 400; font-size: 0.8rem;">C</div>
+            <span>CREATA</span>
+        </div>
+    </nav>
+
+    <!-- CURSOR -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <canvas id="hero-particles"></canvas>
+        <div class="hero-logo">
+            <svg viewBox="0 0 200 200">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#D4AF37"/>
+                        <stop offset="100%" stop-color="#D4AF37"/>
+                    </linearGradient>
+                </defs>
+                <circle cx="100" cy="100" r="90" stroke="url(#logoGradient)" stroke-width="4" fill="none"/>
+                <text x="50%" y="55%" text-anchor="middle" fill="#EAEAEA" font-size="100" font-family="Playfair Display" font-weight="400">C</text>
+            </svg>
+        </div>
+        <h1>We Create the <span class="gradient-text">Future</span></h1>
+        <p style="color: var(--text-muted); letter-spacing: 4px; margin-top: 24px; font-size: 0.8rem; text-transform: uppercase;">Est. 2026 • Global Technology</p>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down hover-target" style="color: var(--accent-gold); font-size: 20px;"></i>
+        </div>
+    </header>
+
+    <!-- FOUNDER SECTION -->
+    <section class="section">
+        <div class="founder-container fade-in-section">
+            <div class="founder-text"> 
+                <h2 style="font-size: 3rem; margin-bottom: 32px;">Ikrom Islomov</h2>
+                <p style="color: #ccc; margin-bottom: 32px;">
+                    Front-End Developer va Cybersecurity Specialist. ITPU University 2-bosqich talabasi. 
+                    Creata kompaniyasi asoschisi sifatida har bir loyihada sifat, dizayn va xavfsizlikni birinchi o‘ringa qo‘yaman.
+                </p>
+                <div style="border-left: 2px solid var(--accent-gold); padding-left: 24px; margin-bottom: 24px;">
+                    <p style="color: var(--text-color); font-family: var(--font-display); font-style: italic; font-size: 1.2rem; margin-bottom: 16px; line-height: 1.4;">“Men faqat saytlar yaratmayman. Men kelajakni quraman.”</p>
+                    <span style="color: var(--accent-gold); font-size: 0.7rem; letter-spacing: 2px; font-weight: 600;">CEO & FOUNDER</span>
+                </div>
+                <div class="achievements-row fade-in-section">
+                    <div class="ach-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="ach-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="ach-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="ach-icon" style="display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-map-marker-alt"></i> <span style="font-size: 0.75rem; font-family: var(--font-main); letter-spacing: 1px;">TASHKENT</span>
+                    </div>
+                </div>
+            </div>
+            <div class="founder-image">
+                <div style="width: 100%; height: 100%; background: url('photo_2026-03-21_23-12-04.jpg'); background-size: cover; background-position: center;">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator-line"></div>
+
+    <!-- SERVICES -->
+    <section class="section">
+        <h2 style="font-size: 3rem; text-align: center; color: var(--text-color);">Our Ecosystem</h2>
+        <div class="services-grid">
+            <div class="card fade-in-section hover-target">
+                <i class="fas fa-brain"></i>
+                <h3>Creata AI</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Sun’iy intellekt platformasi.</p>
+            </div>
+            <div class="card fade-in-section hover-target">
+                <i class="fas fa-globe"></i>
+                <h3>Creata Market</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Online marketplace tizimi.</p>
+            </div>
+            <div class="card fade-in-section hover-target">
+                <i class="fas fa-cloud"></i>
+                <h3>Creata Cloud</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Hosting va server infratuzilmasi.</p>
+            </div>
+            <div class="card fade-in-section hover-target">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Creata Super App</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Barcha xizmatlar bir joyda.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator-line"></div>
+
+    <!-- TIMELINE -->
+    <section class="section">
+        <h2 style="font-size: 3rem; margin-bottom: 80px; text-align: center; color: var(--text-color);">Roadmap 2030</h2>
+        <div class="timeline fade-in-section">
+            <div class="timeline-item hover-target">
+                <div class="year">2026</div><h3>Launch</h3><p style="color: #aaa;">Kompaniya asos solinadi va platforma ishga tushadi.</p>
+            </div>
+            <div class="timeline-item hover-target">
+                <div class="year">2027</div><h3>AI</h3><p style="color: #aaa;">Creata AI tizimi ishga tushadi.</p>
+            </div>
+            <div class="timeline-item hover-target">
+                <div class="year">2028</div><h3>Ecosystem</h3><p style="color: #aaa;">Marketplace va mobil ilova.</p>
+            </div>
+            <div class="timeline-item hover-target">
+                <div class="year">2030</div><h3>Global</h3><p style="color: #aaa;">Global miqyosga chiqish.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI CHAT -->
+    <section class="section" style="text-align: center;">
+        <div class="chat-ui fade-in-section" style="background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); border-radius: 4px;">
+            <div class="chat-header"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            <div class="chat-messages" id="chat-box">
+                <div class="msg bot">Salom! Men Creata AI man. Nima yarata olaman?</div>
+            </div>
+            <div style="padding: 10px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 10px;">
+                <input type="text" id="chat-input" placeholder="Xabar yozing..." style="flex: 1; background: transparent; border: none; color: #fff; outline: none; font-family: var(--font-main);">
+                <button id="chat-send-btn" style="background: transparent; border: none; color: var(--accent-gold); cursor: pointer;"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="section" style="padding-top: 0;">
+        <div class="fade-in-section" style="max-width: 600px; margin: 0 auto;">
+            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 40px;">Contact Us</h2>
+            <form id="contact-form" style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="contact-inputs">
+                    <input type="text" name="name" placeholder="Ismingiz" required style="padding: 16px; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); color: #fff; border-radius: 4px; outline: none;">
+                    <input type="email" name="email" placeholder="Email" required style="padding: 16px; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); color: #fff; border-radius: 4px; outline: none;">
+                </div>
+                <textarea name="message" rows="5" placeholder="Xabaringiz..." required style="padding: 16px; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); color: #fff; border-radius: 4px; outline: none; resize: none;"></textarea>
+                <button type="submit" class="btn-glow hover-target" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div style="display: flex; align-items: center; gap: 10px;"><div style="width: 30px; height: 30px; background: var(--accent-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: black; font-weight: 500;">C</div><span style="font-weight: 500; letter-spacing: 2px;">CREATA</span></div>
+        <div style="display: flex; gap: 20px;"><a href="#" class="subtle-link"><i class="fab fa-instagram"></i></a><a href="#" class="subtle-link"><i class="fab fa-telegram"></i></a></div>
+    </footer>
+
+    <!-- SUPPORT FLOATING BUTTON -->
+    <button id="open-support-btn" class="support-float-btn hover-target">
+        <i class="fas fa-headset"></i>
+    </button>
+
+    <!-- SUPPORT MODAL -->
+    <div id="support-modal" class="modal-overlay hidden">
+        <div class="modal-content glass">
+            <button id="close-support-btn" class="close-modal">&times;</button>
+            <h3 style="margin-bottom: 20px; text-align: center;">Support Center</h3>
+            <form id="support-form" style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="text" name="name" placeholder="Ismingiz" required style="padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: #fff; outline: none;">
+                <input type="email" name="email" placeholder="Emailingiz" required style="padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: #fff; outline: none;">
+                
+                <select name="issueType" required style="padding: 12px; background: #0F0F0F; border: 1px solid var(--glass-border); color: #fff; outline: none;">
+                    <option value="Bug">Saytdagi xatolik (Bug)</option>
+                    <option value="Account">Hisob masalalari</option>
+                    <option value="Other">Boshqa</option>
+                </select>
+
+                <textarea name="description" rows="4" placeholder="Muammo haqida..." required style="padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: #fff; outline: none; resize: none;"></textarea>
+                <button type="submit" class="btn-glow" style="margin-top: 10px;">Yuborish</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JS Faylga ulanish -->
+    <script src="script.js"></script>
+</body>
+</html>
