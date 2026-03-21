@@ -74,15 +74,16 @@ app.get('/robots.txt', (req, res) => {
 app.get('/sitemap.xml', (req, res) => {
     res.type('application/xml');
     const date = new Date().toISOString();
+    // XML boshida bo'sh joy qolmasligi shart. Kodni chap tarafga taqab yozamiz.
     res.send(`<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        <url>
-            <loc>https://creata-company-islomov-ikrom.onrender.com/</loc>
-            <lastmod>${date}</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>1.0</priority>
-        </url>
-    </urlset>`);
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://creata-company-islomov-ikrom.onrender.com/</loc>
+    <lastmod>${date}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>`);
 });
 
 // Fayllar asosiy papkada bo'lgani uchun 'public' ni olib tashlaymiz yoki __dirname ishlatamiz
