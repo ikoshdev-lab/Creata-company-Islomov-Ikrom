@@ -186,8 +186,12 @@ contactForm.addEventListener('submit', async (e) => {
             btn.style.color = '#4CAF50'; 
             contactForm.reset();
             setTimeout(() => { btn.innerText = 'Send Message'; btn.style.color = ''; }, 3000);
+        } else {
+            // Serverdan kelgan xatoni ko'rsatish
+            alert(result.message);
+            btn.innerText = 'Qayta urinish';
         }
-    } catch (error) { btn.innerText = 'Xatolik!'; }
+    } catch (error) { console.error(error); btn.innerText = 'Tarmoq Xatosi!'; }
 });
 
 // --- SUPPORT FORM HANDLER ---

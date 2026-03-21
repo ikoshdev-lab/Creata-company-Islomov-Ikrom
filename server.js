@@ -63,17 +63,17 @@ const chatLimiter = rateLimit({
     message: { reply: "Juda ko'p so'rov yubordingiz. Iltimos 1 daqiqadan so'ng urinib ko'ring." }
 });
 
-// Kontakt forma uchun: 1 soatda maksimum 5 ta xabar
+// Kontakt forma uchun: 1 soatda maksimum 50 ta xabar (Ko'paytirildi)
 const contactLimiter = rateLimit({
     windowMs: 60 * 60 * 1000,
-    max: 5,
+    max: 50,
     message: { success: false, message: "Xavfsizlik maqsadida xabar yuborish vaqtincha cheklandi." }
 });
 
-// Support uchun: 1 soatda maksimum 3 ta ticket
+// Support uchun: 1 soatda maksimum 50 ta ticket (Ko'paytirildi)
 const supportLimiter = rateLimit({
     windowMs: 60 * 60 * 1000,
-    max: 3,
+    max: 50,
     message: { success: false, message: "Juda ko'p so'rov. Iltimos keyinroq urinib ko'ring." }
 });
 
@@ -174,7 +174,8 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
         res.status(201).json({ success: true, message: "Xabaringiz muvaffaqiyatli yuborildi!" });
     } catch (error) {
         console.error("Xabarni saqlashda yoki yuborishda xatolik:", error);
-        res.status(500).json({ success: false, message: "Serverda xatolik yuz berdi. Iltimos, keyinroq urinib ko'ring." });
+        // Xatolikni aniqroq qaytaramiz (Login/Parol xato bo'lsa ko'rinadi)
+        res.status(500).json({ success: false, message: "Xatolik: " + error.message });
     }
 });
 
@@ -244,7 +245,7 @@ app.post('/api/support', supportLimiter, async (req, res) => {
 
     } catch (error) {
         console.error("Support xatolik:", error);
-        res.status(500).json({ success: false, message: "Server xatoligi." });
+        res.status(500).json({ success: false, message: "Xatolik: " + error.message });
     }
 });
 
