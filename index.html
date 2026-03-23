@@ -12,6 +12,10 @@
     <meta property="og:title" content="Creata Company | Future is Here">
     <meta property="og:description" content="Creata Company - Kelajakni biz bilan quring. AI va zamonaviy texnologiyalar ekotizimi.">
     <meta property="og:site_name" content="Creata Company">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Creata Company | Future is Here">
+    <meta name="twitter:description" content="Creata Company - Kelajak texnologiyalari, AI, Web Dasturlash va Kiberxavfsizlik.">
+    <meta name="twitter:image" content="https://creata-company-islomov-ikrom.onrender.com/photo_2026-03-21_23-12-04.jpg">
     <!-- Domen olganingizda shu joyga haqiqiy domenni yozasiz, masalan: https://creata.uz -->
     <link rel="canonical" href="https://creata-company-islomov-ikrom.onrender.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,7 +67,7 @@
     <!-- LIGHT & NOISE -->
     <div id="spotlight"></div>
     <div class="noise-overlay"></div>
-    <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Mavzuni o'zgartirish"><i class="fas fa-adjust"></i></button>
 
     <!-- NAVBAR -->
     <nav class="navbar">
@@ -72,9 +76,9 @@
             <span>CREATA</span>
         </div>
         <div class="nav-socials">
-            <a href="https://instagram.com/ikosh.dev" target="_blank" class="subtle-link"><i class="fab fa-instagram"></i></a>
-            <a href="https://t.me/ikoshdev" target="_blank" class="subtle-link"><i class="fab fa-telegram"></i></a>
-            <a href="https://www.linkedin.com/in/ikromjon-islomov-5b7896386/" target="_blank" class="subtle-link"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/ikosh.dev" target="_blank" class="subtle-link" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/ikoshdev" target="_blank" class="subtle-link" aria-label="Telegram" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.linkedin.com/in/ikromjon-islomov-5b7896386/" target="_blank" class="subtle-link" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
         </div>
     </nav>
 
@@ -192,7 +196,7 @@
             </div>
             <div style="padding: 10px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 10px;">
                 <input type="text" id="chat-input" placeholder="Xabar yozing..." style="flex: 1; background: transparent; border: none; color: #fff; outline: none; font-family: var(--font-main);">
-                <button id="chat-send-btn" style="background: transparent; border: none; color: var(--accent-gold); cursor: pointer;"><i class="fas fa-paper-plane"></i></button>
+                <button id="chat-send-btn" style="background: transparent; border: none; color: var(--accent-gold); cursor: pointer;" aria-label="Xabar yuborish"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </section>
@@ -215,21 +219,21 @@
     <footer>
         <div style="display: flex; align-items: center; gap: 10px;"><div style="width: 30px; height: 30px; background: var(--accent-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: black; font-weight: 500;">C</div><span style="font-weight: 500; letter-spacing: 2px;">CREATA</span></div>
         <div style="display: flex; gap: 20px;">
-            <a href="https://instagram.com/ikosh.dev" target="_blank" class="subtle-link"><i class="fab fa-instagram"></i></a>
-            <a href="https://t.me/ikoshdev" target="_blank" class="subtle-link"><i class="fab fa-telegram"></i></a>
-            <a href="https://www.linkedin.com/in/ikromjon-islomov-5b7896386/" target="_blank" class="subtle-link"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/ikosh.dev" target="_blank" class="subtle-link" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/ikoshdev" target="_blank" class="subtle-link" aria-label="Telegram" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.linkedin.com/in/ikromjon-islomov-5b7896386/" target="_blank" class="subtle-link" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
 
     <!-- SUPPORT FLOATING BUTTON -->
-    <button id="open-support-btn" class="support-float-btn hover-target">
+    <button id="open-support-btn" class="support-float-btn hover-target" aria-label="Yordam markazi">
         <i class="fas fa-headset"></i>
     </button>
 
     <!-- SUPPORT MODAL -->
     <div id="support-modal" class="modal-overlay hidden">
         <div class="modal-content glass">
-            <button id="close-support-btn" class="close-modal">&times;</button>
+            <button id="close-support-btn" class="close-modal" aria-label="Yopish">&times;</button>
             <h3 style="margin-bottom: 20px; text-align: center;">Support Center</h3>
             <form id="support-form" style="display: flex; flex-direction: column; gap: 15px;">
                 <input type="text" name="name" placeholder="Ismingiz" required style="padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: #fff; outline: none;">
