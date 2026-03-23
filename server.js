@@ -67,12 +67,6 @@ app.get('/favicon.svg', sendLogo);
 app.get('/favicon.ico', sendLogo); // Brauzer avtomatik qidirganda ham logo chiqishi uchun
 
 // --- SEO: ROBOTS.TXT & SITEMAP.XML ---
-// Google botlari saytni o'qishi uchun ruxsatlar
-app.get('/robots.txt', (req, res) => {
-    res.type('text/plain');
-    res.send("User-agent: *\nAllow: /\nSitemap: https://creata-company-islomov-ikrom.onrender.com/sitemap.xml");
-});
-
 // Sayt xaritasi (Google tezroq topishi uchun)
 app.get('/sitemap.xml', (req, res) => {
     res.type('application/xml');

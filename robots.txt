@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://creata-company-islomov-ikrom.onrender.com/sitemap.xml
