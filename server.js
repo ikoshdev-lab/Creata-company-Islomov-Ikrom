@@ -53,7 +53,7 @@ app.use(mongoSanitize()); // NoSQL Injection (baza buzish) oldini olish
 app.use(xss()); // XSS (zararli skriptlar) tozalash
 
 // --- FAVICON (Serverdan to'g'ridan-to'g'ri logo yuborish) ---
-app.get('/favicon.ico', (req, res) => {
+app.get('/favicon.svg', (req, res) => {
     const svg = `
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
         <circle cx='50' cy='50' r='50' fill='#D4AF37'/>

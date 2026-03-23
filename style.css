@@ -70,6 +70,7 @@ body:hover .cursor-outline.hovered { width: 80px; height: 80px; background-color
 .founder-container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 120px; align-items: center; }
 .founder-image { height: 650px; width: 100%; background: #0A0A0A; border-radius: var(--border-radius-main); display: flex; justify-content: center; align-items: center; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 20px 40px rgba(0,0,0,0.3); transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s ease; }
 .founder-image:hover { transform: scale(1.02); box-shadow: 0 30px 60px rgba(0,0,0,0.5); border-color: rgba(212, 175, 55, 0.2); }
+.founder-image img { width: 100%; height: 100%; object-fit: cover; }
 .founder-card-inner { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
 .founder-image i { font-size: 5rem; color: var(--text-muted); }
 .achievements-row { display: flex; gap: 24px; margin-top: 32px; align-items: center; }
