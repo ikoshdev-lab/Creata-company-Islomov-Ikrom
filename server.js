@@ -53,7 +53,7 @@ app.use(mongoSanitize()); // NoSQL Injection (baza buzish) oldini olish
 app.use(xss()); // XSS (zararli skriptlar) tozalash
 
 // --- FAVICON (Serverdan to'g'ridan-to'g'ri logo yuborish) ---
-app.get('/favicon.svg', (req, res) => {
+const sendLogo = (req, res) => {
     const svg = `
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
         <circle cx='50' cy='50' r='50' fill='#D4AF37'/>
@@ -61,7 +61,10 @@ app.get('/favicon.svg', (req, res) => {
     </svg>`;
     res.setHeader('Content-Type', 'image/svg+xml');
     res.send(svg);
-});
+};
+
+app.get('/favicon.svg', sendLogo);
+app.get('/favicon.ico', sendLogo); // Brauzer avtomatik qidirganda ham logo chiqishi uchun
 
 // --- SEO: ROBOTS.TXT & SITEMAP.XML ---
 // Google botlari saytni o'qishi uchun ruxsatlar
